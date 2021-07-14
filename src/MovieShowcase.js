@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import MovieCard from './card-components/MovieCard.js'
 import movieData from './data.js'
 
+const mData = movieData
+
 export default class MovieShowcase extends Component {
 
   generateMovieCards = () => {
-    // map over your movieData array and return an array of the correct JSX
+    return (
+        mData.map(title => <li>{this.props.title}</li>)
+    );
   }
 
   render() {
